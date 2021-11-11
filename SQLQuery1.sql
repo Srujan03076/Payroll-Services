@@ -10,7 +10,7 @@ USE payroll_service;
 CREATE TABLE employee_payroll(
 id int not null,
 name varchar(20) not null,
-salary float not null,
+salary money not null,
 startdate date not null
 );
 
