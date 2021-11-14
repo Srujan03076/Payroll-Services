@@ -35,6 +35,15 @@ SELECT Name, Startdate FROM employee_payroll WHERE Name='srujan';
   --------------UC6------------------------
 -----------Alter the table to add gender---
 ALTER TABLE employee_payroll ADD Gender CHAR(1);
-UPDATE employee_payroll SET Gender='M' WHERE id=1;
+UPDATE employee_payroll SET Gender='M' where id=1 ;
 SELECT * FROM employee_payroll;
+
+
+-------------------------Uc7----------------------------------------
+----calculate sum,avergae,min,max,count of employee ased on gender---
+SELECT SUM(Salary) AS TotalSalary,Gender FROM employee_payroll GROUP BY Gender;
+SELECT AVG(Salary) AS AverageSalary FROM employee_payroll GROUP BY Gender;
+SELECT COUNT(Salary) AS TotalSalary,Gender FROM employee_payroll GROUP BY Gender;
+SELECT MIN(Salary) AS  MinSalary,Gender FROM employee_payroll GROUP BY Gender;
+SELECT MAX(Salary) AS MaxSalary,Gender FROM employee_payroll GROUP BY Gender;
 
