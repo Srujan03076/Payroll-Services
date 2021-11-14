@@ -39,7 +39,7 @@ UPDATE employee_payroll SET Gender='M' where id=1 ;
 SELECT * FROM employee_payroll;
 
 
--------------------------Uc7----------------------------------------
+-------------------------UC7----------------------------------------
 ----calculate sum,avergae,min,max,count of employee ased on gender---
 SELECT SUM(Salary) AS TotalSalary,Gender FROM employee_payroll GROUP BY Gender;
 SELECT AVG(Salary) AS AverageSalary FROM employee_payroll GROUP BY Gender;
