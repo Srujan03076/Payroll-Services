@@ -9,9 +9,9 @@ USE payroll_service;
 ---Create table for DataBase---
 CREATE TABLE employee_payroll(
 id int not null,
-name varchar(20) not null,
-salary money not null,
-startdate date not null
+Name varchar(20) not null,
+Salary money not null,
+Startdate date not null
 );
 
 
@@ -25,6 +25,11 @@ INSERT INTO employee_payroll VALUES
 --------UC4-----------
 ---Retrieve all data from employee_payroll
 SELECT * FROM employee_payroll;
+
+----------UC5-----------------------
+---------Retrieve Specific Data-------
+SELECT Name, Startdate FROM employee_payroll WHERE Name='srujan';
+  SELECT * FROM employee_payroll WHERE StartDate between CAST('2019-01-01' as date) and GETDATE();
 
 
 
